@@ -54,25 +54,29 @@ class _QuestionBoxState extends State<QuestionBox> {
     this._questionText = question.questionText;
   }
 
+  void _onTap() { }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: this._onTap,
       child: Container(
         child: Center(
           child: Card(
             child: Column(
-              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
+
                 ListTile(
                   leading: this._icon,
+
                   title: Text(
                     this._questionText,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                      fontSize: 24,
                     ),
                   ),
+                  
                   // if is random question - set respective subtitle
                   subtitle: this._isRandomQuestion ? 
                     Text(
@@ -81,7 +85,7 @@ class _QuestionBoxState extends State<QuestionBox> {
                         color: Colors.grey,
                         fontSize: 14,
                       ),
-                    ) : null,
+                    ) : Text(""),
                 )
               ],
             ),

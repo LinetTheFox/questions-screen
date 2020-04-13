@@ -6,7 +6,9 @@ class PlaceholderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      body: Text("Sample text"),
+      body: Text("This screen is a placeholder. \n" + 
+      "This means it's here for testing purposes and will be removed " +
+      "or replaced by a normal screen." ),
     );
   }
 
